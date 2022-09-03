@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
+    </head>
+<body>
+    <header>
+
+    </header>
+    <main class="main-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-12 left-area">
+                    <img src="./assets/img/login.svg" class="img-fluid h-100 w-100" alt="login-img">
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 p-5 form-area">
+                    <h3 class="main-heading">Welcome to Vuexy!</h3>
+                    <p>Please sign-in to your account and start the adventure</p>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-12">
+                          <label for="validationCustom01" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="validationCustom01" required>
+                          <div class="invalid-feedback">
+                            The Email field is required.
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 col-12">
+                          <label for="validationCustomUsername" class="form-label">Password</label>
+                          <div class="input-group has-validation">
+                            
+                            <input type="password" class="form-control"  name="password" id="password"  required>
+
+                            <div class="invalid-feedback">
+                              The Password field is required.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Remember Me
+                            </label>
+                            <div class="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-12">
+                          <button class="btn btn-primary btn-sign-in col-md-12 col-12" type="submit">Sign-In</button>
+                        </div>
+                        <br/>
+                        <p>New on our platform? Create an account</p>
+                      </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()
+    </script>
+</body>
+</html>
